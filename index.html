@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fil">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#120d0b">
+  <meta name="color-scheme" content="dark">
+  <title>Kilalanin si Jasmin</title>
+  <meta name="description" content="Jasmin Ann R. Revilla — Criminology Intern sa BFP Alfonso. Isang recite-along na pagpapakilala.">
+  <meta property="og:title" content="Kilalanin si Jasmin 🚒">
+  <meta property="og:description" content="Criminology Intern · BFP Alfonso. Buksan at sabay-sabay nating i-recite!">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="jasmin.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%92%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="embers" aria-hidden="true"></canvas>
+  <div class="glow" aria-hidden="true"></div>
+
+  <main class="app">
+
+    <!-- ========== INTRO ========== -->
+    <section id="intro" class="screen is-active" aria-labelledby="introTitle">
+      <div class="hazard" aria-hidden="true"></div>
+
+      <div class="alarm-row">
+        <span class="beacon" aria-hidden="true"></span>
+        <span class="alarm-text">Incoming alarm</span>
+        <span class="beacon" aria-hidden="true"></span>
+      </div>
+
+      <p class="kicker" id="introKicker"></p>
+
+      <div class="id-card">
+        <div class="photo-wrap">
+          <img src="jasmin.jpg" alt="Larawan ni Jasmin Ann R. Revilla na naka-uniform" width="640" height="800" decoding="async">
+          <span class="photo-badge">Intern</span>
+        </div>
+        <div class="reflect" aria-hidden="true"></div>
+        <h1 id="introTitle" class="intro-title">
+          <span class="intro-pre">Kilalanin si</span>
+          <span class="intro-name" id="introNick"></span>
+        </h1>
+        <p class="intro-full" id="introName"></p>
+        <p class="intro-tag" id="introTagline"></p>
+      </div>
+
+      <ol class="how">
+        <li><span class="how-n">1</span><span>Isa-isang lalabas ang details ko.</span></li>
+        <li><span class="how-n">2</span><span>Sabay-sabay n'yong <b>i-recite nang malakas</b>.</span></li>
+        <li><span class="how-n">3</span><span>Bawat recite, humihina ang apoy — hanggang <b>FIRE OUT!</b> 🧯</span></li>
+      </ol>
+
+      <div class="actions">
+        <button class="btn btn-fire btn-xl" id="startBtn" type="button">
+          <span aria-hidden="true">🚨</span> Respond!
+        </button>
+        <div class="btn-pair">
+          <button class="btn btn-ghost" id="introDrillBtn" type="button">🎯 Recall Drill</button>
+          <button class="btn btn-ghost" id="introAllBtn" type="button">📋 Lahat ng details</button>
+        </div>
+      </div>
+
+      <footer class="foot">
+        <span>Kilalanin si Jasmin · BFP Alfonso</span>
+        <button class="link-btn" id="adminOpen" type="button" aria-label="Admin login">🔒 Admin</button>
+      </footer>
+    </section>
+
+    <!-- ========== DECK (one detail at a time) ========== -->
+    <section id="deck" class="screen" aria-label="Mga detalye">
+      <header class="bar">
+        <button class="icon-btn" id="deckHome" type="button" aria-label="Bumalik sa simula">✕</button>
+        <div class="meter" role="progressbar" aria-label="Lakas ng apoy" aria-valuemin="0" aria-valuemax="100" id="meter">
+          <div class="meter-label"><span id="meterIcon">🔥</span> Apoy <b id="meterPct">100%</b></div>
+          <div class="meter-track"><div class="meter-fill" id="meterFill"></div></div>
+        </div>
+        <span class="count" id="deckCount">1/9</span>
+      </header>
+
+      <div class="stage" id="stage" aria-live="polite"></div>
+
+      <div class="controls">
+        <button class="btn btn-ghost btn-square" id="prevBtn" type="button" aria-label="Nakaraang detail">‹</button>
+        <button class="btn btn-water btn-xl" id="nextBtn" type="button">
+          <span aria-hidden="true">💦</span> <span id="nextLabel">Na-recite! Next</span>
+        </button>
+      </div>
+      <p class="hint">Swipe pakaliwa o i-tap ang button</p>
+    </section>
+
+    <!-- ========== END ========== -->
+    <section id="end" class="screen" aria-labelledby="endTitle">
+      <div class="out-badge" aria-hidden="true">🧯</div>
+      <h2 class="out-title" id="endTitle">Fire Out!</h2>
+      <p class="out-sub">Kilala n'yo na ako. <span id="endClosing"></span></p>
+
+      <div class="recap">
+        <p class="recap-head">Huling roll call — sabay-sabay ulit!</p>
+        <ul class="recap-list" id="recapList"></ul>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-fire btn-xl" id="endDrillBtn" type="button">🎯 Recall Drill</button>
+        <div class="btn-pair">
+          <button class="btn btn-ghost" id="endRestartBtn" type="button">↺ Ulitin</button>
+          <button class="btn btn-ghost" id="endHomeBtn" type="button">⌂ Home</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ALL DETAILS ========== -->
+    <section id="all" class="screen" aria-labelledby="allTitle">
+      <header class="bar">
+        <button class="icon-btn" id="allHome" type="button" aria-label="Bumalik sa simula">‹</button>
+        <h2 class="bar-title" id="allTitle">Lahat ng details</h2>
+        <span class="count" id="allCount"></span>
+      </header>
+      <ul class="all-list" id="allList"></ul>
+      <div class="actions">
+        <button class="btn btn-fire" id="allStartBtn" type="button">🚨 Simulan ang recite</button>
+      </div>
+    </section>
+
+    <!-- ========== RECALL DRILL ========== -->
+    <section id="drill" class="screen" aria-labelledby="drillTitle">
+      <header class="bar">
+        <button class="icon-btn" id="drillHome" type="button" aria-label="Bumalik sa simula">✕</button>
+        <h2 class="bar-title" id="drillTitle">Recall Drill</h2>
+        <span class="count" id="drillCount">1/9</span>
+      </header>
+
+      <div class="drill-card">
+        <p class="drill-tag" id="drillTag">Tanong</p>
+        <p class="drill-q" id="drillQ"></p>
+
+        <button class="reveal" id="revealBtn" type="button">
+          <span class="reveal-hint">👆 I-tap para makita ang sagot</span>
+        </button>
+        <div class="answer" id="answer" hidden>
+          <span class="answer-icon" id="ansIcon"></span>
+          <p class="answer-value" id="ansValue"></p>
+          <p class="answer-sub" id="ansSub"></p>
+        </div>
+      </div>
+
+      <div class="judge" id="judge" hidden>
+        <p class="judge-q">Nasagot ba nila?</p>
+        <div class="btn-pair">
+          <button class="btn btn-ok" id="gotBtn" type="button">✓ Nakuha!</button>
+          <button class="btn btn-miss" id="missBtn" type="button">✗ Nakalimutan</button>
+        </div>
+      </div>
+      <p class="score-line">Score: <b id="drillScore">0</b></p>
+    </section>
+
+    <!-- ========== DRILL RESULT ========== -->
+    <section id="drillEnd" class="screen" aria-labelledby="resultTitle">
+      <p class="kicker">Drill result</p>
+      <div class="result-score"><span id="resultScore">0</span><small>/<span id="resultTotal">0</span></small></div>
+      <h2 class="out-title" id="resultTitle"></h2>
+      <p class="out-sub" id="resultMsg"></p>
+      <div class="actions">
+        <button class="btn btn-fire btn-xl" id="drillAgainBtn" type="button">🎯 Ulitin ang drill</button>
+        <div class="btn-pair">
+          <button class="btn btn-ghost" id="resultRestartBtn" type="button">↺ Recite ulit</button>
+          <button class="btn btn-ghost" id="resultHomeBtn" type="button">⌂ Home</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== ADMIN ========== -->
+  <div class="overlay" id="admin" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+      <header class="sheet-head">
+        <h2 id="adminTitle">🔒 Admin</h2>
+        <button class="icon-btn" id="adminClose" type="button" aria-label="Isara">✕</button>
+      </header>
+      <div class="sheet-body" id="adminBody"></div>
+    </div>
+  </div>
+
+  <div class="splash-layer" id="splash" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
