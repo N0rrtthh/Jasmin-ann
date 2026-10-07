@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "adminHash": "ec80fb880bf79d8fcf5cacf913ae6dacccd41a6b188c95f58338695ec4992f1a",
+  "profile": {
+    "name": "Jasmin Ann R. Revilla",
+    "nickname": "Jasmin",
+    "tagline": "Criminology Intern · Cavite State University",
+    "kicker": "OJT Day 2 · BFP Alfonso Fire Station",
+    "closing": "Salamat po, BFP Alfonso! Handang matuto at maglingkod. 🫡"
+  },
+  "details": [
+    {
+      "id": "name",
+      "icon": "👤",
+      "label": "Pangalan",
+      "value": "Jasmin Ann R. Revilla",
+      "sub": "Criminology Intern",
+      "recite": "Siya si Jasmin Ann R. Revilla!",
+      "question": "Ano ang buong pangalan ko?"
+    },
+    {
+      "id": "age",
+      "icon": "🎂",
+      "label": "Edad",
+      "value": "23 years old",
+      "sub": "",
+      "recite": "23 years old na siya!",
+      "question": "Ilang taon na ako?"
+    },
+    {
+      "id": "home",
+      "icon": "📍",
+      "label": "Tirahan",
+      "value": "Dasmariñas, Cavite",
+      "sub": "",
+      "recite": "Taga-Dasmariñas, Cavite siya!",
+      "question": "Taga-saan ako?"
+    },
+    {
+      "id": "family",
+      "icon": "👨‍👩‍👧‍👦",
+      "label": "Pamilya",
+      "value": "7 magkakapatid",
+      "sub": "Pito kaming magkakapatid",
+      "recite": "Pito silang magkakapatid!",
+      "question": "Ilan kaming magkakapatid?"
+    },
+    {
+      "id": "elem",
+      "icon": "🎒",
+      "label": "Elementary",
+      "value": "Graduated 2016",
+      "sub": "Dasmariñas",
+      "recite": "Elementary graduate, 2016 — Dasmariñas!",
+      "question": "Anong taon ako nag-graduate ng elementary?"
+    },
+    {
+      "id": "hs",
+      "icon": "🏫",
+      "label": "High School",
+      "value": "Graduated 2020",
+      "sub": "Dasmariñas",
+      "recite": "High school graduate, 2020 — Dasmariñas!",
+      "question": "Anong taon ako nag-graduate ng high school?"
+    },
+    {
+      "id": "shs",
+      "icon": "📚",
+      "label": "Senior High School",
+      "value": "Graduated 2022",
+      "sub": "Dasmariñas",
+      "recite": "Senior high graduate, 2022 — Dasmariñas!",
+      "question": "Anong taon ako nag-graduate ng senior high?"
+    },
+    {
+      "id": "college",
+      "icon": "🎓",
+      "label": "College",
+      "value": "CvSU · Criminology",
+      "sub": "Na-admit sa CvSU noong 2022 — hindi na nakalaya 😅",
+      "recite": "CvSU Criminology since 2022 — hindi na nakalaya!",
+      "question": "Saan ako nag-aaral at anong course ko?"
+    },
+    {
+      "id": "ojt",
+      "icon": "🚒",
+      "label": "Ngayon",
+      "value": "OJT sa BFP Alfonso",
+      "sub": "Criminology Intern · Alfonso Fire Station",
+      "recite": "OJT siya ngayon sa BFP Alfonso!",
+      "question": "Saan ako nag-OJT ngayon?"
+    }
+  ]
+}
